@@ -37,11 +37,11 @@ Two distinct "no answer" paths: The system can return "I couldn't find that info
 Full index rebuild on every run: build_index.py always builds a brand-new FAISS index from all embeddings, rather than incrementally adding only new vectors. At 555 vectors this is fast and not a real problem, but it wouldn't scale efficiently to a much larger dataset, where rebuilding from scratch every time would become expensive.
 
 ## Setup / How to Run
-1. Install dependencies:
+ 1. Install dependencies:
    pip install faster-whisper openai faiss-cpu numpy python-dotenv
-2. Create a .env file in the project root with your OpenAI API key:
+ 2. Create a .env file in the project root with your OpenAI API key:
    OPENAI_API_KEY=your_key_here
-3. Add video/audio files to data/videos/, then run the pipeline in order:
+ 3. Add video/audio files to data/videos/, then run the pipeline in order:
    python ingestion/transcribe.py
    python ingestion/chunk.py
    python indexing/embed.py

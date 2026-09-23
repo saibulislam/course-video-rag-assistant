@@ -1,0 +1,10 @@
+.env
+data/videos/
+data/transcripts/
+data/chunks/
+data/embeddings/
+data/index.faiss
+data/metadata.json
+__pycache__/
+venv/
+*.pyc
